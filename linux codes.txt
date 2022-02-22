@@ -276,3 +276,59 @@ sum(fizetes)<2000k;
 
 
 
+
+
+
+
+
+2022-02-22
+linux commands:
+lsblk
+fdisk /dev/sdb
+p
+n
+enterek
+w
+kész
+
+lsblk
+fdisk/dev/sdc
+p
+n
+enterek
++10G
+
+mkfs.ext4 /dev/sdb1
+lsblk -f
+mkfs.ext4 /dev/sdc1
+mkfs.ext4 /dev/sdc2
+lsblk -f
+mkdir /mnt/a
+mkdir /mnt/b
+mkdir /mnt/data
+mount -t ext4 /dev/sdb1 /mnt/a
+lsblk
+mount -t ext4 /dev/sdc1 /mnt/b
+mount -t ext4 /dev/sdc2 /mnt/data
+lsblk
+
+
+nano /etc/fstab
+/dev/sdb1 /mnt/a ext4 defaults 0 1
+/dev/sdc1 /mnt/b ext4 defaults 0 1
+/dev/sdc2 /mnt/data ext4 defaults 0 1
+blkid
+blkid /dev/sdb1
+
+cd /etc
+cp fstab fstab.eredeti
+blkid /dev/sdc2 | cut -f 2 -d " " >> /etc/fstab
+kivesszük a felső aposztrofot + /mnt/data ext4 defaults 0 1
+blkid >> /etc/fstab
+mount -a
+reboot
+poweroff
+
+
+hostname zold.lan
+nano /etc/hostname
