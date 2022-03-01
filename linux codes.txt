@@ -417,3 +417,52 @@ cron
 
 25, Mi a neve az egyszerú időzítő démonnak?
 at
+
+
+
+
+
+hostname alma
+nano /etc/hostname
+alma
+
+apt install isc-dhcp-server
+systemctl start isc-dhcp-server
+systemctl stop isc-dhcp-server
+systemctl restartisc-dhcp-server
+
+Belső hálózat
+/etc/dhcp/dhcpd.conf
+
+cd /etc
+nano /etc/motd
+nano /etc/issue
+nano /etc/issue.net
+nano /etc/ssh/sshd_config
+systemctl restart ssh
+
+nano /etc/network/interfaces
+ifdown enp0s8
+ifup enp0s8
+
+nano /etc/default/isc-dhcp-server
+nano /etc/dhcp/dhcpd.conf
+
+http://szit.hu/doku.php?id=oktatas:linux:dhcp_szerver:isc-dhcp-server
+
+dhcpd -t
+systemctl start isc-dhcp-server
+dhcp-lease-list
+dhcp-lease-list --all
+
+sysctl net.ipv4.ip_forward
+sysctl net.ipv4.ip_forward=1
+
+apt install iptables
+iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
+
+
+
+
+
+
