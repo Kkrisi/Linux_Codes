@@ -332,3 +332,88 @@ poweroff
 
 hostname zold.lan
 nano /etc/hostname
+
+
+
+
+
+
+
+
+
+
+2022-03-01
+1, Hol lehet beállítani a Debian GNU/Linuxon tartósan fix IP címet?
+/etc/network/interfaces
+
+2, Hol lehet beállítani tartósan dinamikus IP címet Debian GNU/Linuxon?
+/etc/network/interfaces
+
+3, Hogyan frissítjük a csomag információkat?
+apt update
+
+4, Mit csinál a következő parancs? "apt update"
+feltölti a csomaginformációkat
+
+5, Hogyan veszünk fel egy új felhasználót?
+adduser tibi
+
+6, Hogyan veszünk fel új csoportot?
+addgroup human
+
+7, Hogyan formázhatjuk ext4 fájlrendszerre a /dev/scd3 partíciót?
+mkfs.ext4 /dev/sdc3
+
+8, Hogyan csatoljuk a /mnt/a könyvtárba a /dev/sdc4 eszközt ideiglenesen?
+mount -t ext4 /dev/sdc4 /mnt/a
+
+9, Hogyan nézhetjük meg a futó folyamatokat?
+ps
+
+10, Melyik az elsőként induló folyamat? Mi a PID száma?
+init	,	PID száma = 1
+
+11, Mit csinál a tail parancs a következő utasításban? "tail /var/adat.txt"
+megmutatja az adat.txt fájl utolsó 10 sorát
+
+12, Mit csinál a head parancs a következő utasításban? "head /var/adat.txt"
+megmutatja az adat.txt fájl első 10 sorát
+
+13, Melyik partíciónáló program?
+fdisk
+
+14, Hol tárolódnak a felvett felhasználók?
+/etc/passwd
+
+15, Hol tárolódnak a felvett csoportok?
+/etc/group
+
+16, Hogyan lehet csoportot törölni?
+delgroup human
+
+17, Hogyan lehet felhasználót törölni?
+deluser tibi
+
+18, Hogyan nézhetjük meg, hogy fel van e véve a mari nevú felhasználó?
+getent passwd mari
+
+19, Hogyan nézhetünk meg egy csoportot?
+getent group human
+
+20, Mit csinál az id parancs?
+Kiírja a felhasználó azonosítóját és csoportjait
+
+21, Hol lehet belépés utáni üddvözlő özenetet beéllítani?
+/etc/motd
+
+22, Hol lehet bejelentkezes előtti üzenetet beállítani?
+/etc/motd
+
+23, Hol lehet beállítani, hogy ha SSH belépés előtt is megjelen üzenet?
+/etc//ssh/sshd_config
+
+24, Mi a neve a ciklikus időzítő démonnak?
+cron
+
+25, Mi a neve az egyszerú időzítő démonnak?
+at
