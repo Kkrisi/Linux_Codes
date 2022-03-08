@@ -340,12 +340,7 @@ user mari
 pass 12345
 retr 1
 
-
-
-
-
-
-
+cd /etc/skel/
 
 
 
