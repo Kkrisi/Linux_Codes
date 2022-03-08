@@ -313,3 +313,42 @@ iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
 
 
 
+
+
+
+2022-02-08
+apt install postfix	-levelezőszerver
+apt install mutt
+adduser mari
+deluser mari
+
+
+
+GUI telepítés
+apt update
+apt install lxde
+reboot
+	(lxterminal)
+apt install thunderbird
+apt install thunderbird-l10n-hu
+apt install popa3d
+ps ax
+ss -lt
+ss -ltn
+telnet localhost 110
+user mari
+pass 12345
+retr 1
+
+
+
+
+
+
+
+
+
+
+
+
+
